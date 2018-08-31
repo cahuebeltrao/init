@@ -1,0 +1,5 @@
+#!/bin/bash
+
+uptime
+
+# 'last' gives more information about different boots and logins

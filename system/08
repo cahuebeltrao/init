@@ -1,0 +1,1 @@
+The /etc/ssh/ssh_known hosts and ~/.ssh/known_hosts files contain the host public keys for all known hosts. The use of the global file is optional; if it is used, it must be prepared by the administrator. The per-user file is maintained automatically. Each time the user connects from an unknown host, the key of that unknown host is added to the per-user file.

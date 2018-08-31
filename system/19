@@ -1,0 +1,4 @@
+#!/bin/bash
+
+iptables -P INPUT DROP
+# drop any packets not coming from previously authorized ip range

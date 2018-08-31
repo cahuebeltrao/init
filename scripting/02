@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Create executable script
+echo "#!/bin/bash
+
+sudo apt update >> /var/log/update_script.log && sudo apt upgrade >> /var/log/update_script.log" > ~/pkg_updates
+
+chmod +x ~/pkg_updates
+
+# Temporarily store current crontab jobs
+crontab -l > ~/mycron_temp
+
+# Add our new task
+echo '* 4 * * 1 root ~/pkg_updates' >> ~/mycron_temp
+
+# Force crontab to use our updated list of jobs
+crontab ~/mycron_temp
+
+# Remove temporary file
+rm ~/mycron_temp

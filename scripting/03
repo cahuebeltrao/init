@@ -1,0 +1,5 @@
+#!/bin/bash
+
+FOLDER=$1
+
+ls -S -h -l -p $FOLDER | grep -v /
